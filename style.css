@@ -26,7 +26,7 @@ body {
 
 .header {
   display: grid;
-  grid-template-columns: repeat(5, 1fr) 4fr repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr) 2fr repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 15px;
   grid-row-gap: 0px;
@@ -119,8 +119,31 @@ body {
   border: 1px none rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   text-align: center;
-  margin-left: 230px;
+  margin-left: 100px;
   padding: 9.5px 16px;
+}
+
+@media (max-width: 1075px) {
+  .header__coupon {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px none rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 20px;
+    padding: 9.5px 16px;
+  }
+}
+@media (max-width: 763px) {
+  .header__coupon {
+    display: none;
+  }
+  .basic {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
 }
 
 .header__text-seache {
