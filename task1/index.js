@@ -50,6 +50,27 @@ console.log(deepCompare({ one: 1, two: "2" }, { two: "2", one: 1 }));
 
 //true"
 
+function chessBoard(num1, num2) {
+  let result = "";
+  for (let i = 0; i < num2; i++) {
+    for (let j = 0; j < num1; j++) {
+      if (i % 2 !== 0) {
+        result += j % 2 === 0 ? " " : "#";
+      } else {
+        result += j % 2 === 0 ? "#" : " ";
+      }
+    }
+    result += "\n";
+  }
+  return result;
+}
+
+console.log(chessBoard(8, 4)); //
+// # # # #
+// # # # #
+// # # # #
+// # # # #"
+
 function makeRange(start, end, num) {
   let result = [];
   if (num == undefined) {

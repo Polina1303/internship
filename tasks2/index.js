@@ -83,3 +83,74 @@ function partitionOn(pred, items) {
 }
 
 console.log(items.slice(i));
+
+function fun(callback) {
+  return typeof callback === "function" ? callback(value) : value;
+}
+
+function zero(callback) {
+  const value = 0;
+  return fun(callback);
+}
+function one(callback) {
+  const value = 1;
+  return fun(callback);
+}
+function two(callback) {
+  const value = 2;
+  return fun(callback);
+}
+function three(callback) {
+  const value = 3;
+  return fun(callback);
+}
+function four(callback) {
+  const value = 4;
+  return fun(callback);
+}
+function five(callback) {
+  const value = 5;
+  return fun(callback);
+}
+function six(callback) {
+  const value = 6;
+  return fun(callback);
+}
+function seven(callback) {
+  const value = 7;
+  return fun(callback);
+}
+function eight(callback) {
+  const value = 8;
+  return fun(callback);
+}
+function nine(callback) {
+  const value = 9;
+  return fun(callback);
+}
+
+function plus(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+function minus(a) {
+  return function (b) {
+    return a - b;
+  };
+}
+function times(a) {
+  return function (b) {
+    return a * b;
+  };
+}
+function dividedBy(a) {
+  return function (b) {
+    return Math.floor(a / b);
+  };
+}
+
+console.log(seven(times(five())), 35);
+console.log(four(plus(nine())), 13);
+console.log(eight(minus(three())), 5);
+console.log(six(dividedBy(two())), 3);
